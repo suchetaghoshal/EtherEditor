@@ -1,0 +1,36 @@
+This extension will allow you to use Etherpad Lite as an optional editor for wiki pages.
+
+First, you'll need to install Etherpad Lite itself. Instructions for that are here:
+
+https://github.com/Pita/etherpad-lite/blob/master/README.md#installation
+
+Next, you'll need to install a few Etherpad Lite plugins. That's as simple as
+downloading the plugins and putting them in the node_modules directory in the
+etherpad instance. Once they are installed, you should restart Etherpad Lite
+and make sure it works, stand-alone, as a wikitext editor. The repositories for
+the necessary plugins can be found here:
+
+https://gitorious.org/ep_plugins
+
+Finally, put this extension into your mediawiki extensions directory, and add
+the necessary configuration to LocalSettings.php. It should look something like
+this:
+
+require_once( "$IP/extensions/EtherEditor/EtherEditor.php" );
+$wgEtherpadConfig = array(
+    // the API host, for cookies (should probably be the same as $wgServer)
+    'apiHost' => 'localhost',
+    // the API host for backend calls (usually localhost)
+    'apiBackend' => 'localhost',
+    // the API port (because it's often 9001)
+    'apiPort' => '9001',
+    // the API root path (usually just '/api'
+    'apiUrl' => '/api',
+    // the pad root path (usually just '/p')
+    'pUrl' => '/p',
+    // the API key, found in APIKEY.txt in your etherpad lite instance directory
+    'apiKey' => 'secret',
+);
+
+Thanks for using this extension! And please contact Mark Holmquist <mtraceur@member.fsf.org>
+with any bugs or concerns.
