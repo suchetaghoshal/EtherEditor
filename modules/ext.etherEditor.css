@@ -1,0 +1,244 @@
+#ethereditor-userlist-contain,
+#ethereditor-padlist-contain {
+	position: relative;
+}
+
+img.listicon {
+	height: 16px;
+	width: 16px;
+}
+
+#ethereditor-usercount,
+#ethereditor-padcount,
+img.listicon {
+	cursor: pointer;
+	padding: 4px;
+}
+
+.isnotadmin .userctrls {
+	display: none;
+}
+
+.hidden {
+	display: none;
+}
+
+#ethereditor-userlist div {
+	padding-top: 5px;
+	clear: both;
+}
+
+.ethereditor-usercolor,
+.ethereditor-username {
+	float: left;
+}
+
+.ethereditor-username {
+	width: 150px;
+	overflow: hidden;
+}
+
+.ethereditor-usercolor {
+	height: 20px;
+	width: 20px;
+	margin: 0px 5px;
+}
+
+.dropdown {
+	background: #f9f9f9;
+	background-image: -webkit-linear-gradient(top, #f9f9f9, #e9e9e9);
+	background-image: -moz-linear-gradient(top, #f9f9f9, #e9e9e9);
+	background-image: -ms-linear-gradient(top, #f9f9f9, #e9e9e9);
+	background-image: -o-linear-gradient(top, #f9f9f9, #e9e9e9);
+	background-image: linear-gradient(to bottom, #f9f9f9, #e9e9e9);
+	background-repeat: no-repeat;
+	border: 1px solid #c0c0c0;
+	border-bottom: 1px solid #b6b6b6;
+	border-top: 1px solid #c9c9c9;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), inset 0 1px 0 #fff;
+	-moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), inset 0 1px 0 #fff;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), inset 0 1px 0 #fff;
+	margin: 15px auto;
+	outline: none;
+	padding: 10px 0px 10px 0px;
+	position: absolute;
+	right: -40px;
+	top: 20px;
+	width: 400px;
+	z-index: 10000;
+	list-style: none;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+/* Top Arrow Border - tweak its position by changing the "right" attr (also in .dropdown:after) */
+.dropdown.session:before {
+	border-color: #c0c0c0 transparent;
+	border-style: solid;
+	border-width: 0 8px 8px;
+	content: "";
+	display: block;
+	right: 50px;
+	position: absolute;
+	top: -8px;
+	width: 0;
+}
+
+/* Top Arrow */
+.dropdown.session:after {
+	border-color: #f9f9f9 transparent;
+	border-style: solid;
+	border-width: 0 8px 8px;
+	content: "";
+	display: block;
+	right: 50px;
+	position: absolute;
+	top: -7px;
+	width: 0;
+}
+
+.dropdown.user {
+	right: 0px;
+}
+
+/* Top Arrow Border - tweak its position by changing the "right" attr (also in .dropdown:after) */
+.dropdown.user:before {
+	border-color: #c0c0c0 transparent;
+	border-style: solid;
+	border-width: 0 8px 8px;
+	content: "";
+	display: block;
+	right: 10px;
+	position: absolute;
+	top: -8px;
+	width: 0;
+}
+
+/* Top Arrow */
+.dropdown.user:after {
+	border-color: #f9f9f9 transparent;
+	border-style: solid;
+	border-width: 0 8px 8px;
+	content: "";
+	display: block;
+	right: 10px;
+	position: absolute;
+	top: -7px;
+	width: 0;
+}
+
+.dropdown li {
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
+	color: #777;
+	display: block;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 11px;
+	line-height: 1;
+	margin: 0;
+	padding: 6px 10px;
+	text-shadow: 0 1px 0 #fff;
+	text-decoration: none;
+}
+
+.dropdown.session li {
+	cursor: pointer;
+}
+
+.dropdown.session li:hover {
+	background: #444;
+	background-image: -webkit-linear-gradient(top, #999, #777);
+	background-image: -moz-linear-gradient(top, #999, #777);
+	background-image: -ms-linear-gradient(top, #999, #777);
+	background-image: -o-linear-gradient(top, #999, #777);
+	background-image: linear-gradient(to bottom, #999, #777);
+	background-repeat: no-repeat;
+	border-top: 1px solid #888;
+	border-bottom: 1px solid #777;
+	color: #eee;
+	text-decoration: none;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+	cursor: arrow;
+}
+
+/* Container for session creator, connected users */
+div.session-info {
+	max-width: 250px;
+	display: inline-block;
+	margin-right: 30px;
+}
+
+/* Container for split session button */
+div.session-button {
+	float: right;
+	display: inline-block;
+}
+
+/* Session info styling ("Session started by...")
+ * Note: User is a span because it needs to sit with the user color thing. */
+p.session-details,
+span.user-details {
+	font-weight: bold;
+}
+
+/* Connected users styling ("1 connected user") */
+p.connected-users {
+	font-weight: normal;
+	font-style: italic;
+	float: right;
+}
+
+/* Wikimedia Agora Buttons */
+button.button {
+	display: inline-block;
+	padding: 0.4065em 1.2195em 0.4065em;
+	font: bold 0.813em "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1;
+	color: white;
+	text-align: center;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+button.button.blue {
+	background-color: #3366bb;
+	background-image: -moz-linear-gradient(top, #3670c8, #3366bb);
+	background-image: -ms-linear-gradient(top, #3670c8, #3366bb);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3670c8), color-stop(100%, #3366bb));
+	background-image: -webkit-linear-gradient(top, #3670c8, #3366bb);
+	background-image: linear-gradient(#3670c8, #3366bb);
+	border: 1px #33589f solid;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#3670c8', endColorstr='#3366bb', GradientType=0)";
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#3670c8', endColorstr='#3366bb', GradientType=0);
+}
+
+button.button.blue:hover {
+	background-color: #3f77d7;
+	background-image: -moz-linear-gradient(top, #4c84da, #3f77d7);
+	background-image: -ms-linear-gradient(top, #4c84da, #3f77d7);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4c84da), color-stop(100%, #3f77d7));
+	background-image: -webkit-linear-gradient(top, #4c84da, #3f77d7);
+	background-image: linear-gradient(#4c84da, #3f77d7);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c84da', endColorstr='#3f77d7', GradientType=0)";
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#4c84da', endColorstr='#3f77d7', GradientType=0);
+}
+
+button.button.blue:active {
+	background-color: #2a549c;
+	background-image: -moz-linear-gradient(top, #2d5ea9, #2a549c);
+	background-image: -ms-linear-gradient(top, #2d5ea9, #2a549c);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2d5ea9), color-stop(100%, #2a549c));
+	background-image: -webkit-linear-gradient(top, #2d5ea9, #2a549c);
+	background-image: linear-gradient(#2d5ea9, #2a549c);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#2d5ea9', endColorstr='#2a549c', GradientType=0)";
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#2d5ea9', endColorstr='#2a549c', GradientType=0);
+}
+
+li.current-pad {
+	background-color: #FCF8CA
+}
