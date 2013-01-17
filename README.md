@@ -1,0 +1,4 @@
+EtherEditor
+===========
+
+A MediaWiki extension
